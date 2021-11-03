@@ -12,6 +12,9 @@ public class Variable {
         Sytem.out.println(ram);
         System.out.println(streamS);
         System.out.println(freq);
-        
+        System.out.println(f);
+        System.out.println(d);
+        System.out.println(ch);
+        System.out.println(bln);
     }
 }
