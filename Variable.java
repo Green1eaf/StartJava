@@ -9,7 +9,7 @@ public class Variable {
         char ch = 'g';
         boolean bln = true;
         System.out.println(cores);
-        Sytem.out.println(ram);
+        System.out.println(ram);
         System.out.println(streamS);
         System.out.println(freq);
         System.out.println(f);
