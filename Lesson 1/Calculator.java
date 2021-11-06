@@ -4,7 +4,9 @@ public class Calculator {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        while (true) {
+        String answer = "";
+
+        while (!answer.equals("no")) {
             System.out.print("Enter first number: ");
             int firstNum = scan.nextInt();
             System.out.print("Enter arithmetic action: ");
@@ -12,39 +14,30 @@ public class Calculator {
             String sign = scan.nextLine();
             System.out.print("Enter second number: ");
             int secondNum = scan.nextInt();
-            if(sign.equals("+")) {
-                int result = firstNum + secondNum;
-                System.out.println("Result = " + result);
+            
+            int result = 1;
+            if(sign.equals("^") && secondNum == 0) {
+            } else if(sign.equals("+")) {
+                result = firstNum + secondNum;
             } else if (sign.equals("-")) {
-                int result = firstNum - secondNum;
-                System.out.println("Result = " + result);
+                result = firstNum - secondNum;
             } else if (sign.equals("*")) {
-                int result = firstNum * secondNum;
-                System.out.println("Result = " + result);
+                result = firstNum * secondNum;
             } else if (sign.equals("/")) {
-                int result = firstNum / secondNum;
-                System.out.println("Result = " + result);
+                result = firstNum / secondNum;
             } else if (sign.equals("^")) {
-                int result = firstNum;
+                result = firstNum;
                 for (int i = 0; i < secondNum - 1; i++) {
-                    if (secondNum == 0) {
-                        System.out.println("Result = " + 1);
-                        break;
-                    }
                     result *= firstNum;
                 }
-                System.out.println("Result = " + result);
             } else if (sign.equals("%")) {
-                int result = firstNum % secondNum;
-                System.out.println("Result = " + result);
+                result = firstNum % secondNum;
             }
+            System.out.println("Result = " + result);
 
             System.out.println("Do U wanna count again? [yes/no]: ");
             scan.nextLine();
-            String answer = scan.nextLine();
-            if (answer.equals("no")) {
-                break;
-            }
+            answer = scan.nextLine();
         }
         scan.close();
     }
