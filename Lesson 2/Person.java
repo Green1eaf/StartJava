@@ -1,9 +1,9 @@
 public class Person {
-    String sex = "Male";
-    String name = "Alex";
-    int height = 186;
-    int weight = 84;
-    int age = 30;
+    private String sex = "Male";
+    private String name = "Alex";
+    private int height = 186;
+    private int weight = 84;
+    private int age = 30;
 
     public void Go() {
     }
