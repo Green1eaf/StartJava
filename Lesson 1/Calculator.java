@@ -15,8 +15,9 @@ public class Calculator {
             System.out.print("Enter second number: ");
             int secondNum = scan.nextInt();
             
-            int result = 1;
+            int result = 0;
             if(sign.equals("^") && secondNum == 0) {
+                result = 1;
             } else if(sign.equals("+")) {
                 result = firstNum + secondNum;
             } else if (sign.equals("-")) {
