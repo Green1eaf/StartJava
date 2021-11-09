@@ -4,7 +4,9 @@ public class CalculatorTest {
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        while (true) {
+        String answer = "";
+        while (!answer.equals("no")) {
+            answer = "";
             System.out.println("Введите первое число: ");
             double firstNumber = scan.nextDouble();
             scan.nextLine();
@@ -14,17 +16,13 @@ public class CalculatorTest {
             double secondNumber = scan.nextDouble();
             scan.nextLine();
             Calculator calculator = new Calculator(firstNumber, sign, secondNumber);
-            System.out.println("Ответ: " + calculator.getResult());
+            System.out.println("Ответ: " + calculator.calculate());
 
-            String answer = "";
-            while(!answer.equals("yes")) {
+            while(!answer.equals("yes") && !answer.equals("no")) {
                 System.out.println("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scan.nextLine();
-                if(answer.equals("no")) {
-                    scan.close();
-                    return;
-                }
             }
         }
+        scan.close();
     }
 }

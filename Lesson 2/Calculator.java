@@ -1,39 +1,33 @@
 class Calculator {
-    double firstNumber;
-    char sign;
-    double secondNumber;
-    double result;
+    private double firstNumber;
+    private char sign;
+    private double secondNumber;
 
     public Calculator(double firstNumber, char sign, double secondNumber) {
         this.firstNumber = firstNumber;
         this.sign = sign;
         this.secondNumber = secondNumber;
+    }
 
+    public double calculate() {
+        double result = 0;
         switch(sign) {
             case '+':
-                result = firstNumber + secondNumber;
-                break;
+                return firstNumber + secondNumber;
             case '-':
-                result = firstNumber - secondNumber;
-                break;
+                return firstNumber - secondNumber;
             case '*':
-                result = firstNumber * secondNumber;
-                break;
+                return firstNumber * secondNumber;
             case '/':
-                result  = firstNumber / secondNumber;
-                break;
+                return firstNumber / secondNumber;
             case '%':
-                result = firstNumber % secondNumber;
-                break;
+                return firstNumber % secondNumber;
             case '^':
                 result = 1;
                 for (int i = 0; i < secondNumber; i++) {
                     result *= firstNumber;
                 }
         }
-    }
-
-    public double getResult() {
         return result;
     }
 }
