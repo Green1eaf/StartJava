@@ -36,7 +36,7 @@ class Jaeger {
                 "\nReadyForBattle: " + readyForBattle());
     }
 
-    public boolean drifr() {
+    public boolean drift() {
         return true;
     }
 
