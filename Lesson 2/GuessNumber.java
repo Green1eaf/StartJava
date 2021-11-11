@@ -3,12 +3,12 @@ import java.util.Scanner;
 public class GuessNumber {
     
     public static void main(String[] args) {
-        System.out.println("Угадай число!");
+        System.out.println("РЈРіР°РґР°Р№ С‡РёСЃР»Рѕ!");
         int targetNumber = (int) (Math.random() * 101);
-        Scanner scan = new Scanner(System.in, "Cp1251");
-        System.out.print("Введите имя первого игрока: ");
+        Scanner scan = new Scanner(System.in);
+        System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ РїРµСЂРІРѕРіРѕ РёРіСЂРѕРєР°: ");
         Player firstPlayer = new Player(scan.nextLine());
-        System.out.print("Введите имя второго игрока: ");
+        System.out.print("Р’РІРµРґРёС‚Рµ РёРјСЏ РІС‚РѕСЂРѕРіРѕ РёРіСЂРѕРєР°: ");
         Player secondPlayer = new Player(scan.nextLine());
         int answer = 0;
 
@@ -16,33 +16,33 @@ public class GuessNumber {
         while(!repeat.equals("no")) {
             repeat = "";
             while(true) {
-                System.out.print(firstPlayer.getName() + " введите число: ");
+                System.out.print(firstPlayer.getName() + " РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
                 answer = scan.nextInt();
                 scan.nextLine();
                 if (targetNumber < answer) {
-                    System.out.println("Данное число больше того, что загадал компьютер");
+                    System.out.println("Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
                 } else if (targetNumber > answer) {
-                    System.out.println("Данное число меньше того, что загадал компьютер");
+                    System.out.println("Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
                 } else if (targetNumber == answer) {
-                    System.out.println("Поздравляю! Игрок " + firstPlayer.getName() + " угадал число!");
+                    System.out.println("РџРѕР·РґСЂР°РІР»СЏСЋ! " + firstPlayer.getName() + " СѓРіР°РґР°Р» С‡РёСЃР»Рѕ!");
                     break;
                 }
 
-                System.out.print(secondPlayer.getName() + " введите число: ");
+                System.out.print(secondPlayer.getName() + " РІРІРµРґРёС‚Рµ С‡РёСЃР»Рѕ: ");
                 answer = scan.nextInt();
                 scan.nextLine();
                 if (targetNumber < answer) {
-                    System.out.println("Данное число больше того, что загадал компьютер");
+                    System.out.println("Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ Р±РѕР»СЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
                 } else if (targetNumber > answer) {
-                    System.out.println("Данное число меньше того, что загадал компьютер");
+                    System.out.println("Р”Р°РЅРЅРѕРµ С‡РёСЃР»Рѕ РјРµРЅСЊС€Рµ С‚РѕРіРѕ, С‡С‚Рѕ Р·Р°РіР°РґР°Р» РєРѕРјРїСЊСЋС‚РµСЂ");
                 } else if (targetNumber == answer) {
-                    System.out.println("Поздравляю! " + secondPlayer.getName() + " угадал число!");
+                    System.out.println("РџРѕР·РґСЂР°РІР»СЏСЋ! " + secondPlayer.getName() + " СѓРіР°РґР°Р» С‡РёСЃР»Рѕ!");
                     break;
                 }
             }
 
             while(!repeat.equals("no") && !repeat.equals("yes")) {
-                System.out.println("Хотите продолжить игру? [yes/no]: ");
+                System.out.println("РҐРѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РёРіСЂСѓ? [yes/no]: ");
                 repeat = scan.nextLine();
             }
         }
