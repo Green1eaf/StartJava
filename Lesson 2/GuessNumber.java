@@ -3,8 +3,8 @@ import java.util.Scanner;
 public class GuessNumber {
     private Player firstPlayer;
     private Player secondPlayer;
-    int targetNumber;
-    Scanner scan;
+    private int targetNumber;
+    private Scanner scan;
 
     public GuessNumber() {
         System.out.println("Угадай число!");
