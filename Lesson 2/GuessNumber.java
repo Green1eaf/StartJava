@@ -17,14 +17,12 @@ public class GuessNumber {
             int number = scan.nextInt();
             if(compareNumbers(number, targetNumber)) {
                 System.out.println("Поздравляю! " + firstPlayer.getName() + " угадал число!");
-                scan.close();
                 break;
             }
             System.out.print(secondPlayer.getName() + " введите число: ");
             number = scan.nextInt();
             if(compareNumbers(number, targetNumber)) {
                 System.out.println("Поздравляю! " + secondPlayer.getName() + " угадал число!");
-                scan.close();
                 break;
             }
         }
