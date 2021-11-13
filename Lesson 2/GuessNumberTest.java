@@ -12,7 +12,7 @@ public class GuessNumberTest {
         Player secondPlayer = new Player(secondPlayerName);
 
         GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
-        String repeat = "";
+        String repeat;
         do {
             game.play();
             do {
