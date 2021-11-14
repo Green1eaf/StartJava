@@ -1,42 +1,69 @@
 class Jaeger {
 
-    private String modelName = "Bracer Phoenix";
-    private String mark = "Mark-5";
-    private String origin = "USA";
-    private float height = 70.7f;
-    private float weight = 2.1f;
-    private int strength = 8;
-    private int armor = 9;
+    private String modelName;
+    private String mark;
+    private String origin;
+    private float height;
+    private float weight;
+
+    public String getModelName() {
+        return modelName;
+    }
 
     public void setModelName(String modelName) {
         this.modelName = modelName;
+    }
+
+    public String getMark() {
+        return mark;
     }
 
     public void setMark(String mark) {
         this.mark = mark;
     }
 
+    public String getOrigin() {
+        return origin;
+    }
+
     public void setOrigin(String origin) {
         this.origin = origin;
     }
 
-    private String readyForBattle() {
+    public float getHeight() {
+        return height;
+    }
+
+    public void setHeight(float height) {
+        this.height = height;
+    }
+
+    public float getWeight() {
+        return weight;
+    }
+
+    public void setWeight(float weight) {
+        this.weight = weight;
+    }
+
+    public String readyForBattle() {
         return "Ready";
     }
 
-    private String vortexCannon() {
+    public String vortexCannon() {
         return "activated";
     }
 
-    public void status() {
-        System.out.println("modelName: " + modelName + 
+    public String toString() {
+        return "modelName: " + modelName + 
                 "\nmark: " + mark + 
                 "\norigin: " + origin + 
-                "\nVortexCannon: " + vortexCannon() + 
-                "\nReadyForBattle: " + readyForBattle());
+                "\nheight: " + height +
+                "\nweight: " + weight;
     }
 
     public boolean drift() {
+        System.out.println("Вы вошли в дрифт");
         return true;
     }
 
