@@ -17,10 +17,10 @@ public class CalculatorTest {
             Calculator calculator = new Calculator(firstNumber, sign, secondNumber);
             System.out.println("Ответ: " + calculator.calculate());
 
-            while(!answer.equals("yes") && !answer.equals("no")) {
+            do {
                 System.out.println("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scan.nextLine();
-            }
+            } while(!answer.equals("yes") && !answer.equals("no"));
         } while (!answer.equals("no"));
         scan.close();
     }
