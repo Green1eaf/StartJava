@@ -6,7 +6,6 @@ public class CalculatorTest {
         Scanner scan = new Scanner(System.in);
         String answer;
         do {
-            answer = "";
             System.out.println("Введите первое число: ");
             double firstNumber = scan.nextDouble();
             scan.nextLine();
