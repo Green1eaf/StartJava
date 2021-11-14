@@ -4,8 +4,8 @@ public class CalculatorTest {
     
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String answer = "";
-        while (!answer.equals("no")) {
+        String answer;
+        do {
             answer = "";
             System.out.println("Введите первое число: ");
             double firstNumber = scan.nextDouble();
@@ -22,7 +22,7 @@ public class CalculatorTest {
                 System.out.println("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scan.nextLine();
             }
-        }
+        } while (!answer.equals("no"));
         scan.close();
     }
 }
