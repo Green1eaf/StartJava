@@ -1,4 +1,4 @@
-package com.startjava.lesson_2_3.calculator;
+package com.startjava.lesson_2_3_4.calculator;
 
 class Calculator {
     private double firstNumber;
@@ -25,10 +25,7 @@ class Calculator {
             case '%':
                 return firstNumber % secondNumber;
             case '^':
-                result = 1;
-                for (int i = 0; i < secondNumber; i++) {
-                    result *= firstNumber;
-                }
+                return Math.pow(firstNumber, secondNumber);
         }
         return result;
     }
