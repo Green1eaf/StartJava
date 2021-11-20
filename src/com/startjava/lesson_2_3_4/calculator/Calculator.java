@@ -1,14 +1,17 @@
 package com.startjava.lesson_2_3_4.calculator;
 
+import java.util.Scanner;
+
 class Calculator {
     private double firstNumber;
     private char sign;
     private double secondNumber;
 
-    public Calculator(double firstNumber, char sign, double secondNumber) {
-        this.firstNumber = firstNumber;
-        this.sign = sign;
-        this.secondNumber = secondNumber;
+    public Calculator(String expression) {
+        String[] expressionArray = expression.split(" ");
+        firstNumber = Double.parseDouble(expressionArray[0]);
+        sign = expressionArray[1].charAt(0);
+        secondNumber = Double.parseDouble(expressionArray[2]);
     }
 
     public double calculate() {
@@ -28,5 +31,15 @@ class Calculator {
                 return Math.pow(firstNumber, secondNumber);
         }
         return result;
+    }
+
+    public boolean countAgain() {
+        String answer;
+        Scanner scan = new Scanner(System.in);
+        do {
+            System.out.print("Хотите продолжить вычисления? [yes/no]: ");
+            answer = scan.nextLine();
+        } while(!answer.equals("yes") && !answer.equals("no"));
+        return answer.equals("no");
     }
 }
