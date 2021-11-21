@@ -12,15 +12,18 @@ public class GuessNumberTest {
         System.out.print("Введите имя второго игрока: ");
         String secondPlayerName = scan.nextLine();
         Player secondPlayer = new Player(secondPlayerName);
+        System.out.println("У каждого игрока есть 10 попыток, чтобы угадать число, которое загадал компьютер.");
 
         GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);
         String repeat;
         do {
             game.play();
+            game.getAllAttempts();
             do {
-                System.out.println("Хотите продолжить игру? [yes/no]: ");
+                System.out.print("Хотите продолжить игру? [yes/no]: ");
                 repeat = scan.nextLine();
             } while(!repeat.equals("no") && !repeat.equals("yes"));
+            if(repeat.equals("yes")) game.resetGame();
         } while(!repeat.equals("no"));
         scan.close();
     }
