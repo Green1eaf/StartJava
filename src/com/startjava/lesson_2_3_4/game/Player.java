@@ -22,13 +22,17 @@ public class Player {
         return Arrays.copyOf(numbers, attemptNumber);
     }
 
-    public int getAttemptNumber() { return attemptNumber; }
+    public int getAttemptNumber() {
+        return attemptNumber;
+    }
 
     public void addNumber(int number) {
         numbers[attemptNumber] = number;
     }
 
-    public void increaseAttemptNumber() { ++attemptNumber; }
+    public void increaseAttemptNumber() {
+        ++attemptNumber;
+    }
 
     public void resetCountAttempt() {
         Arrays.fill(numbers, 0, attemptNumber, 0);
