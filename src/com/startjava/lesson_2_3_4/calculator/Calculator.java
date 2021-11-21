@@ -32,14 +32,4 @@ class Calculator {
         }
         return result;
     }
-
-    public boolean countAgain() {
-        String answer;
-        Scanner scan = new Scanner(System.in);
-        do {
-            System.out.print("Хотите продолжить вычисления? [yes/no]: ");
-            answer = scan.nextLine();
-        } while(!answer.equals("yes") && !answer.equals("no"));
-        return answer.equals("no");
-    }
 }
