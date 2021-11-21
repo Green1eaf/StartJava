@@ -38,16 +38,10 @@ public class GuessNumber {
         return false;
     }
 
-    public void getAllAttempts() {
-        System.out.print(firstPlayer.getName() + ": ");
-        for (int i = 0; i < firstPlayer.getNumbers().length; i++) {
-            System.out.print(firstPlayer.getNumbers()[i] + " ");
-        }
-        System.out.println();
-
-        System.out.print(secondPlayer.getName() + ": ");
-        for (int i = 0; i < secondPlayer.getNumbers().length; i++) {
-            System.out.print(secondPlayer.getNumbers()[i] + " ");
+    public void getAllAttempts(Player player) {
+        System.out.print(player.getName() + ": ");
+        for (int i = 0; i < player.getNumbers().length; i++) {
+            System.out.print(player.getNumbers()[i] + " ");
         }
         System.out.println();
     }

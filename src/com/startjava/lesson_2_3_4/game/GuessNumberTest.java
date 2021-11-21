@@ -18,7 +18,8 @@ public class GuessNumberTest {
         String repeat;
         do {
             game.play();
-            game.getAllAttempts();
+            game.getAllAttempts(firstPlayer);
+            game.getAllAttempts(secondPlayer);
             do {
                 System.out.print("Хотите продолжить игру? [yes/no]: ");
                 repeat = scan.nextLine();

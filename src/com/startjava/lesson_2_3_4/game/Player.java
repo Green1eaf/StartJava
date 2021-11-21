@@ -8,9 +8,9 @@ public class Player {
     private int attemptNumber;
 
     public Player(String name) {
+        this.name = name;
         numbers = new int[10];
         Arrays.fill(numbers, 0);
-        this.name = name;
         attemptNumber = 0;
     }
 
