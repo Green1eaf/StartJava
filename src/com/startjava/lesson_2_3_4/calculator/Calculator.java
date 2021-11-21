@@ -1,7 +1,5 @@
 package com.startjava.lesson_2_3_4.calculator;
 
-import java.util.Scanner;
-
 class Calculator {
     private double firstNumber;
     private char sign;
