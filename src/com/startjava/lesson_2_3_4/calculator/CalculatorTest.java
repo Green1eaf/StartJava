@@ -12,6 +12,7 @@ public class CalculatorTest {
             String expression = scan.nextLine();
             Calculator calculator = new Calculator(expression);
             System.out.println("Результат: " + calculator.calculate());
+
             do {
                 System.out.print("Хотите продолжить вычисления? [yes/no]: ");
                 answer = scan.nextLine();
