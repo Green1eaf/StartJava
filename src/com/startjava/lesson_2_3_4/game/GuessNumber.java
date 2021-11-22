@@ -14,7 +14,7 @@ public class GuessNumber {
 
     public void play() {
         targetNumber = (int) (Math.random() * 101);
-        while (!makeMove(firstPlayer) && !makeMove(secondPlayer)) {
+        while (makeMove(firstPlayer) && makeMove(secondPlayer)) {
             if (firstPlayer.getAttemptNumber() == 10 && secondPlayer.getAttemptNumber() == 10) {
                 System.out.println("Оба игрока проиграли! Игра окончена!");
                 break;
@@ -32,11 +32,11 @@ public class GuessNumber {
         int number = scan.nextInt();
         player.addNumber(number);
         player.increaseAttemptNumber();
-        if (compareNumbers(number, player)) return true;
+        if (compareNumbers(number, player)) return false;
         if (player.getAttemptNumber() == 10) {
             System.out.println("У " + player.getName() + " закончились попытки");
         }
-        return false;
+        return true;
     }
 
     private void getAllAttempts(Player player) {
