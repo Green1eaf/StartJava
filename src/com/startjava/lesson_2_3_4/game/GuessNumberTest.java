@@ -3,15 +3,14 @@ package com.startjava.lesson_2_3_4.game;
 import java.util.Scanner;
 
 public class GuessNumberTest {
+
     public static void main(String[] args) {
         System.out.println("Угадай число!");
         Scanner scan = new Scanner(System.in);
         System.out.print("Введите имя первого игрока: ");
-        String firstPlayerName = scan.nextLine();
-        Player firstPlayer = new Player(firstPlayerName);
+        Player firstPlayer = new Player(scan.nextLine());
         System.out.print("Введите имя второго игрока: ");
-        String secondPlayerName = scan.nextLine();
-        Player secondPlayer = new Player(secondPlayerName);
+        Player secondPlayer = new Player(scan.nextLine());
         System.out.println("У каждого игрока есть 10 попыток, чтобы угадать число, которое загадал компьютер.");
 
         GuessNumber game = new GuessNumber(firstPlayer, secondPlayer);

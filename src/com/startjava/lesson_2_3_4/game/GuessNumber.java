@@ -30,7 +30,7 @@ public class GuessNumber {
         int number = scan.nextInt();
         player.addNumber(number);
         player.increaseAttemptNumber();
-        if (compareNumbers(number, targetNumber)) {
+        if (compareNumbers(number)) {
             System.out.println("Игрок " + player.getName() + " угадал число " +
                     targetNumber + " с " + player.getAttemptNumber() + " попытки");
             return true;
@@ -53,7 +53,7 @@ public class GuessNumber {
         secondPlayer.resetCountAttempt();
     }
 
-    private boolean compareNumbers(int playerNumber, int targetNumber) {
+    private boolean compareNumbers(int playerNumber) {
         if (targetNumber < playerNumber) {
             System.out.println("Данное число больше того, что загадал компьютер");
         } else if (targetNumber > playerNumber) {
