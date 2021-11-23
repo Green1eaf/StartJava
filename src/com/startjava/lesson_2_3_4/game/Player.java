@@ -10,8 +10,6 @@ public class Player {
     public Player(String name) {
         this.name = name;
         numbers = new int[10];
-        Arrays.fill(numbers, 0);
-        attemptNumber = 0;
     }
 
     public String getName() {
@@ -28,13 +26,10 @@ public class Player {
 
     public void addNumber(int number) {
         numbers[attemptNumber] = number;
-    }
-
-    public void increaseAttemptNumber() {
         ++attemptNumber;
     }
 
-    public void resetCountAttempt() {
+    public void resetAttempt() {
         Arrays.fill(numbers, 0, attemptNumber, 0);
         attemptNumber = 0;
     }
